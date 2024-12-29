@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "games": "Games"
+  },
+  "home": {
+    "title": "Welcome to GGame",
+    "subtitle": "Your Ultimate Gaming Destination",
+    "playNow": "Play Now",
+    "allGames": "All Games",
+    "popularTags": "Popular Tags",
+    "popularGames": "Popular Games",
+    "banner": {
+      "slide1": {
+        "title": "Welcome to GGame",
+        "description": "Your Ultimate Gaming Destination"
+      },
+      "slide2": {
+        "title": "Play Anywhere",
+        "description": "Enjoy our games on any device"
+      },
+      "slide3": {
+        "title": "Free to Play",
+        "description": "All games are free to play"
+      }
+    }
+  },
+  "game": {
+    "relatedGames": "Related Games",
+    "gameNotFound": "Game Not Found",
+    "categories": {
+      "action": "Action",
+      "adventure": "Adventure",
+      "arcade": "Arcade",
+      "puzzle": "Puzzle",
+      "strategy": "Strategy",
+      "sports": "Sports",
+      "logic": "Logic",
+      "music": "Music",
+      "casual": "Casual",
+      "building": "Building",
+      "halloween": "Halloween",
+      "cooking": "Cooking",
+      "snake": "Snake",
+      "fishing": "Fishing",
+      "dress-up": "Dress Up",
+      "fashion": "Fashion"
+    }
+  },
+  "common": {
+    "loading": "Loading...",
+    "error": "Error",
+    "retry": "Retry"
+  }
+}

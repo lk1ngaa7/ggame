@@ -1,26 +1,33 @@
 <template>
-  <nav class="bg-gray-800 text-white">
-    <div class="container mx-auto px-4">
-      <div class="flex items-center justify-between h-16">
-        <div class="flex items-center">
-          <router-link to="/" class="text-xl font-bold">GameHub</router-link>
-          <div class="ml-10 flex items-center space-x-4">
-            <router-link 
-              v-for="item in navItems" 
-              :key="item.path" 
-              :to="item.path"
-              class="px-3 py-2 rounded-md hover:bg-gray-700"
+  <nav class="bg-white shadow-md">
+    <div class="max-w-7xl mx-auto px-4">
+      <div class="flex justify-between h-16">
+        <div class="flex">
+          <!-- Logo -->
+          <div class="flex-shrink-0 flex items-center">
+            <img
+              class="h-8 w-auto"
+              src="@/assets/logo.svg"
+              alt="Logo"
             >
-              {{ item.name }}
+          </div>
+
+          <!-- Navigation Links -->
+          <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+            <router-link
+              v-for="item in navItems"
+              :key="item.path"
+              :to="item.path"
+              class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-blue-500"
+            >
+              {{ $t(`nav.${item.name.toLowerCase()}`) }}
             </router-link>
           </div>
         </div>
+
+        <!-- Right side -->
         <div class="flex items-center">
-          <input 
-            type="text" 
-            placeholder="Search games..." 
-            class="px-4 py-2 rounded-lg bg-gray-700 text-white placeholder:text-gray-400"
-          >
+          <LanguageSwitcher />
         </div>
       </div>
     </div>
@@ -28,8 +35,10 @@
 </template>
 
 <script setup lang="ts">
+import { defineAsyncComponent } from 'vue'
+import LanguageSwitcher from './LanguageSwitcher.vue'
+
 const navItems = [
-  { name: 'Home', path: '/' },
-  { name: 'Games', path: '/games' }
+  { name: 'home', path: '/' }
 ]
 </script>

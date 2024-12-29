@@ -1,1 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.76 226.69"><path d="M161.096.001l-30.225 52.351L100.647.001H-.005l130.877 226.688L261.749.001z" fill="#41b883"/><path d="M161.096.001l-30.225 52.351L100.647.001H52.346l78.526 136.01L209.398.001z" fill="#34495e"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- 主背景圆形 -->
+  <circle cx="200" cy="200" r="150" fill="#4A90E2"/>
+  
+  <!-- 游戏手柄形状 -->
+  <path d="M140 180 Q200 150 260 180 Q290 195 290 230 Q290 265 260 280 Q200 310 140 280 Q110 265 110 230 Q110 195 140 180Z" 
+        fill="#2C3E50"/>
+  
+  <!-- 按钮装饰 -->
+  <circle cx="220" cy="220" r="15" fill="#E74C3C"/>
+  <circle cx="260" cy="220" r="15" fill="#F1C40F"/>
+  <circle cx="140" cy="220" r="12" fill="#ECF0F1"/>
+  <circle cx="180" cy="220" r="12" fill="#ECF0F1"/>
+  
+  <!-- 装饰性像素方块 -->
+  <rect x="130" y="140" width="20" height="20" fill="#27AE60"/>
+  <rect x="250" y="140" width="20" height="20" fill="#27AE60"/>
+  <rect x="160" y="140" width="20" height="20" fill="#2ECC71"/>
+  <rect x="220" y="140" width="20" height="20" fill="#2ECC71"/>
+  
+  <!-- 添加一些动感线条 -->
+  <path d="M100 180 L80 160" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
+  <path d="M300 180 L320 160" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
+  <path d="M100 240 L80 260" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
+  <path d="M300 240 L320 260" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
+</svg>
