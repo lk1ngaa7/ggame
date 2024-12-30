@@ -1,11 +1,5 @@
 import { ref, computed } from 'vue'
-
-interface Game {
-  englishName: string
-  url: string
-  pic: string
-  tags: string[]
-}
+import type { Game } from '@/types'
 
 export const useGameStore = () => {
   const games = ref<Game[]>(

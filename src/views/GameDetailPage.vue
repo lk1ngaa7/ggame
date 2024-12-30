@@ -5,7 +5,7 @@
       <div class="mb-6">
         <h1 class="text-3xl font-bold mb-4">{{ formatGameName(game.englishName) }}</h1>
         <div class="flex flex-wrap gap-2 mt-4">
-          <span v-for="category in game.categories" :key="category"
+          <span v-for="category in game?.categories || []" :key="category"
             class="px-3 py-1 bg-gray-100 rounded-full text-sm text-gray-600">
             {{ $t(`game.categories.${category}`) }}
           </span>
