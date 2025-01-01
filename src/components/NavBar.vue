@@ -20,7 +20,7 @@
               :to="item.path"
               class="inline-flex items-center px-1 pt-1 text-sm font-medium text-gray-900 hover:text-blue-500"
             >
-              {{ $t(`nav.${item.name.toLowerCase()}`) }}
+              {{ t(`nav.${item.name.toLowerCase()}`) }}
             </router-link>
           </div>
         </div>
@@ -36,7 +36,10 @@
 
 <script setup lang="ts">
 import { defineAsyncComponent } from 'vue'
+import { useI18n } from 'vue-i18n'
 import LanguageSwitcher from './LanguageSwitcher.vue'
+
+const { t } = useI18n()
 
 const navItems = [
   { name: 'home', path: '/' }

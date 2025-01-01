@@ -14,11 +14,11 @@
           <span v-for="category in game.tags?.slice(0, 3)" 
                 :key="category" 
                 class="px-2 py-1 bg-white bg-opacity-50 rounded-full text-xs text-gray-700">
-            {{ $t(`game.categories.${category}`) }}
+            {{ t(`game.categories.${category}`) }}
           </span>
         </div>
         <button class="mt-4 bg-gradient-to-r from-pink-500 to-purple-500 text-white px-4 py-2 rounded-full hover:from-pink-600 hover:to-purple-600 transition-colors w-full transform hover:scale-105 duration-200">
-          {{ $t('home.playNow') }}
+          {{ t('home.playNow') }}
         </button>
       </div>
     </router-link>
@@ -26,6 +26,10 @@
 </template>
 
 <script setup lang="ts">
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 interface Game {
   englishName: string
   url: string

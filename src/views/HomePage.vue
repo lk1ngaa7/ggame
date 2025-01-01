@@ -10,7 +10,7 @@
              :class="{'opacity-100': currentSlide === index, 'opacity-0': currentSlide !== index}">
           <div :class="slide.bgClass" class="h-full w-full flex items-center justify-center">
             <div class="text-center">
-              <h1 class="text-lg text-white font-bold">{{ $t(slide.title) }}</h1>
+              <h1 class="text-lg text-white font-bold">{{ t(slide.title) }}</h1>
             </div>
           </div>
         </div>
@@ -48,7 +48,7 @@
         @click="selectedTag = ''"
         class="h-9 px-4 rounded-full text-sm font-medium transition-all duration-200 whitespace-nowrap"
         :class="selectedTag === '' ? 'bg-indigo-500 text-white' : 'bg-gray-100 hover:bg-gray-200 text-gray-700'">
-        {{ $t('home.allGames') }}
+        {{ t('home.allGames') }}
       </button>
       <button
         v-for="tag in visibleTags"
@@ -107,12 +107,13 @@
                class="w-full h-full object-cover rounded-t-xl"
                referrerpolicy="no-referrer"
                crossorigin="anonymous">
-          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300 rounded-t-xl">
+          <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent rounded-t-xl">
             <div class="absolute bottom-2 left-2 right-2">
               <a :href="`/game/${game.englishName}`"
                  class="block w-full text-center px-3 py-1.5 bg-white text-gray-900 rounded-lg hover:bg-gray-100 transition-colors text-sm"
-                 target="_blank">
-                {{ $t('home.playNow') }}
+                 target="_blank"
+                 @click="trackGameClick(game.englishName)">
+                {{ t('home.playNow') }}
               </a>
             </div>
           </div>
@@ -136,9 +137,11 @@
 import { ref, computed, onMounted, onUnmounted } from 'vue'
 import { useGameStore } from '@/stores/gameStore'
 import { useI18n } from 'vue-i18n'
+import { useGtag } from 'vue-gtag-next'
 
 const { t } = useI18n()
 const { games } = useGameStore()
+const { event } = useGtag()
 
 // 提取所有唯一的标签
 const allTags = computed(() => {
@@ -174,6 +177,13 @@ const bannerSlides = ref([
   }
 ])
 
+// 游戏点击事件追踪
+const trackGameClick = (gameName: string) => {
+  event('game_card_click', {
+    game_name: gameName,
+    source: 'home_page'
+  })
+}
 
 const visibleTags = computed(() => {
   const primaryTagsList = Array.from(allTags.value)

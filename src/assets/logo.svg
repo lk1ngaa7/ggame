@@ -1,26 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
-  <!-- 主背景圆形 -->
-  <circle cx="200" cy="200" r="150" fill="#4A90E2"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+  <!-- Puzzle piece -->
+  <path d="M45 30 C45 25, 40 25, 40 30 L40 40 L30 40 C25 40, 25 45, 30 45 L40 45 L40 55 C40 60, 45 60, 45 55 L45 45 L55 45 C60 45, 60 40, 55 40 L45 40 Z" fill="#8A2BE2"/>
   
-  <!-- 游戏手柄形状 -->
-  <path d="M140 180 Q200 150 260 180 Q290 195 290 230 Q290 265 260 280 Q200 310 140 280 Q110 265 110 230 Q110 195 140 180Z" 
-        fill="#2C3E50"/>
+  <!-- D-pad -->
+  <rect x="65" y="45" width="20" height="30" rx="2" fill="#FF69B4"/>
+  <rect x="60" y="50" width="30" height="20" rx="2" fill="#FF69B4"/>
   
-  <!-- 按钮装饰 -->
-  <circle cx="220" cy="220" r="15" fill="#E74C3C"/>
-  <circle cx="260" cy="220" r="15" fill="#F1C40F"/>
-  <circle cx="140" cy="220" r="12" fill="#ECF0F1"/>
-  <circle cx="180" cy="220" r="12" fill="#ECF0F1"/>
+  <!-- Action buttons -->
+  <circle cx="45" cy="75" r="6" fill="#32CD32"/>
+  <circle cx="55" cy="85" r="6" fill="#4169E1"/>
   
-  <!-- 装饰性像素方块 -->
-  <rect x="130" y="140" width="20" height="20" fill="#27AE60"/>
-  <rect x="250" y="140" width="20" height="20" fill="#27AE60"/>
-  <rect x="160" y="140" width="20" height="20" fill="#2ECC71"/>
-  <rect x="220" y="140" width="20" height="20" fill="#2ECC71"/>
-  
-  <!-- 添加一些动感线条 -->
-  <path d="M100 180 L80 160" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
-  <path d="M300 180 L320 160" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
-  <path d="M100 240 L80 260" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
-  <path d="M300 240 L320 260" stroke="#2980B9" stroke-width="8" stroke-linecap="round"/>
+  <!-- Subtle highlights -->
+  <circle cx="85" cy="35" r="8" fill="#8A2BE2" opacity="0.3"/>
+  <circle cx="90" cy="40" r="4" fill="#FF69B4" opacity="0.3"/>
 </svg>
