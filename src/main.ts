@@ -12,10 +12,16 @@ const app = createApp(App)
 // 配置 Google Analytics
 app.use(VueGtag, {
   property: {
-    id: import.meta.env.VITE_GA_ID // 从环境变量获取 GA ID
+    id: import.meta.env.VITE_GA_ID
   },
-  isEnabled: import.meta.env.PROD, // 仅在生产环境启用
-  useDebugger: !import.meta.env.PROD, // 在开发环境使用调试模式
+  appName: 'GameHub',
+  enabled: true,
+  bootstrap: true,
+  pageTrackerTemplate: () => ({
+    page_title: document.title,
+    page_path: router.currentRoute.value.path,
+    page_location: window.location.href
+  })
 })
 
 app.use(createPinia())
