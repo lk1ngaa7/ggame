@@ -5,11 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "npm run generate-sitemap && run-p type-check \"build-only {@}\" --",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build",
-    "lint": "eslint . --fix"
+    "lint": "eslint . --fix",
+    "generate-sitemap": "tsx scripts/generate-sitemap.ts"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -32,9 +33,11 @@
     "npm-run-all2": "^7.0.1",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.16",
+    "tsx": "^4.19.2",
     "typescript": "~5.6.3",
     "vite": "^6.0.1",
     "vite-plugin-vue-devtools": "^7.6.5",
+    "vite-ssg-sitemap": "^0.8.1",
     "vue-tsc": "^2.1.10"
   }
 }
