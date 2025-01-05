@@ -1,0 +1,56 @@
+# www.robotstxt.org
+# GameHub Global Website Robots Configuration
+# Last Updated: 2025-01-05
+
+User-agent: *
+Allow: /
+
+# 允许访问多语言内容
+Allow: /zh-CN/
+Allow: /en-US/
+Allow: /ja-JP/
+Allow: /ko-KR/
+Allow: /fr-FR/
+Allow: /de-DE/
+Allow: /es-ES/
+Allow: /ru-RU/
+Allow: /pt-BR/
+
+# 允许访问主要内容目录
+Allow: /games/
+Allow: /categories/
+Allow: /tags/
+Allow: /search/
+Allow: /blog/
+Allow: /news/
+
+# 禁止访问敏感目录
+Disallow: /admin/
+Disallow: /api/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /assets/admin/
+Disallow: /dev/
+Disallow: /*.json$
+Disallow: /*?*
+Disallow: /*/preview/
+Disallow: /debug/
+
+# 站点地图
+Sitemap: https://gamehub.newsbridge.top/sitemap.xml
+Sitemap: https://gamehub.newsbridge.top/sitemap-posts.xml
+Sitemap: https://gamehub.newsbridge.top/sitemap-games.xml
+Sitemap: https://gamehub.newsbridge.top/sitemap-categories.xml
+
+# 抓取延迟（单位：秒）- 针对不同搜索引擎设置不同的延迟
+User-agent: Googlebot
+Crawl-delay: 5
+
+User-agent: Bingbot
+Crawl-delay: 10
+
+User-agent: Baiduspider
+Crawl-delay: 10
+
+User-agent: Yandex
+Crawl-delay: 10
